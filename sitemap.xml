@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://singirimahitha.github.io/Techplatform-site/</loc>
+    <lastmod>2025-06-19</lastmod>  <!-- Update with your last modified date -->
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Add more URLs if your site has multiple pages -->
+  <url>
+    <loc>https://singirimahitha.github.io/Techplatform-site/about</loc>
+    <lastmod>2025-06-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
