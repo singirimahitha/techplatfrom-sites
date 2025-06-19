@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechPlatform.in</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #1e3c72;
+      --secondary-color: #4caf50;
+      --accent-color: #45a049;
+      --text-color: #333;
+      --light-bg: #f8f9fa;
+      --dark-text: #1e3c72;
+      --base-font-size: 1.15rem; /* Increased base font size */
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: #f5f5f5;
+      font-size: var(--base-font-size); /* Applied base font size */
+      padding: 0rem;
+      margin: 0%;
+    }
+    
+    /* Header Styles - Restored original graphics */
+    header {
+      background-image: url('images/about\ background.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      border-radius: 15px;
+      text-align: center;
+      white-space: nowrap;
+      margin: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .header-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .header-img {
+      height: 90px;
+      width: auto;
+      background-color: white;
+      border-radius: 8px;
+      padding: 5px;
+      animation: floatImage 3s ease-in-out infinite;
+    }
+    
+    @keyframes floatImage {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    .header-title {
+      font-size: 2.8rem; /* Increased from 2.5rem */
+      color: white;
+      padding: 20px 40px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Navigation */
+    nav {
+      width: 100%;
+      background-color: var(--primary-color);
+      border-radius: 0 0 10px 10px;
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0.8rem;
+      margin: 0;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.6rem 1.4rem; /* Slightly larger padding */
+      border-radius: 6px;
+      background-color: var(--secondary-color);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      font-size: 1.1rem; /* Increased nav font size */
+    }
+    
+    nav ul li a:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    
+    /* Main Content */
+    .main-container {
+      max-width: 1600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background-color: #72c575;
+
+    }
+    
+    .page-title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--dark-text);
+      font-size: 2.2rem; /* Increased from 1.8rem */
+    }
+    
+    .content-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      align-items: flex-start;
+    }
+    
+    .content-image {
+      flex: 1 1 400px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .content-image img {
+
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+      border-radius: 10px 10px 0 0;
+      margin-left: 0;
+    }
+    
+    .content-image img:hover {
+      transform: scale(1.02);
+    }
+    
+    /* Content below the image */
+    .image-content {
+      padding: 1.5rem; /* Increased padding */
+      background: white;
+      border-radius: 0 0 10px 10px;
+      flex-grow: 1;
+    }
+    
+    .image-content h3 {
+      color: var(--dark-text);
+      margin-bottom: 1rem; /* Increased margin */
+      font-size: 1.5rem; /* Increased from default */
+    }
+    
+    .image-content p {
+      margin-bottom: 1rem; /* Increased margin */
+      font-size: 1.1rem; /* Increased from 0.9rem */
+      line-height: 1.7;
+    }
+    
+    .image-content ul {
+      padding-left: 1.5rem; /* Increased padding */
+      margin-bottom: 1.5rem; /* Increased margin */
+      font-size: 1.1rem; /* Increased font size */
+    }
+    
+    .image-content li {
+      margin-bottom: 0.5rem; /* Added spacing between list items */
+    }
+    
+    .content-text {
+      flex: 1 1 500px;
+      font-size: 1.2rem; /* Increased from 1.1rem */
+      line-height: 1.8; /* Increased line height */
+    }
+    
+    .content-text strong {
+      color: var(--dark-text);
+      font-size: 1.25rem; /* Slightly larger for strong text */
+    }
+    
+    /* Features Section */
+    .features-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0; /* Increased margin */
+    }
+    
+    .feature-card {
+      background: white;
+      padding: 1.8rem; /* Increased padding */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem; /* Increased from 2rem */
+      color: var(--secondary-color);
+      margin-bottom: 1.2rem; /* Increased margin */
+    }
+    
+    .feature-card h3 {
+      color: var(--dark-text);
+      margin-bottom: 0.8rem; /* Increased margin */
+      font-size: 1.4rem; /* Increased from default */
+    }
+    
+    .feature-card p {
+      font-size: 1.1rem; /* Increased font size */
+      line-height: 1.7;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2.5rem; /* Increased padding */
+      margin: 2.5rem 0; /* Increased margin */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-section h2 {
+      color: var(--dark-text);
+      text-align: center;
+      margin-bottom: 2rem; /* Increased margin */
+      font-size: 2rem; /* Increased from 1.8rem */
+      position: relative;
+      padding-bottom: 0.8rem; /* Increased padding */
+    }
+    
+    .contact-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px; /* Increased width */
+      height: 4px; /* Increased height */
+      background-color: var(--secondary-color);
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem; /* Increased gap */
+    }
+    
+    .contact-item {
+      background: var(--light-bg);
+      padding: 1.8rem; /* Increased padding */
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-icon {
+      font-size: 2rem; /* Increased from 1.5rem */
+      color: var(--secondary-color);
+      margin-bottom: 1rem; /* Increased margin */
+    }
+    
+    .contact-item h3 {
+      color: var(--dark-text);
+      margin-bottom: 1rem; /* Increased margin */
+      font-size: 1.4rem; /* Increased from 1.2rem */
+    }
+    
+    .contact-item p, 
+    .contact-item a {
+      color: var(--text-color);
+      margin: 0.5rem 0; /* Increased margin */
+      text-decoration: none;
+      font-size: 1.1rem; /* Increased font size */
+      line-height: 1.7;
+    }
+    
+    .contact-item a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+    
+    /* Table Section */
+    .table-section {
+      margin: 3.5rem auto; /* Increased margin */
+      max-width: 1500px;
+      overflow-x: auto;
+    }
+    
+    .table-section h1 {
+      text-align: center;
+      margin-bottom: 2rem; /* Increased margin */
+      color: var(--dark-text);
+      font-size: 2rem; /* Increased from 1.8rem */
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0; /* Increased margin */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1.1rem; /* Increased table font size */
+    }
+    
+    th, td {
+      padding: 1.2rem; /* Increased padding */
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem; /* Increased header font size */
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    tr:hover {
+      background-color: #e9e9e9;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: crimson;
+      color: white;
+      padding: 2rem; /* Increased padding */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem; /* Increased gap */
+      margin: 10px;
+      border-radius: 10px;
+    }
+    
+    .footer-logo {
+      height: 60px; /* Increased height */
+    }
+    
+    .footer-text {
+      font-size: 1.4rem; /* Increased from 1.2rem */
+      font-weight: 600;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 20px; /* Increased gap */
+    }
+    
+    .social-icons a {
+      color: white;
+      font-size: 1.8rem; /* Increased from 1.5rem */
+      transition: transform 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: lightgray;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      :root {
+        --base-font-size: 1.1rem; /* Slightly smaller base size for mobile */
+      }
+      
+      .header-title {
+        font-size: 2.2rem; /* Adjusted for mobile */
+        padding: 15px 25px;
+      }
+      
+      .header-img {
+        height: 70px;
+      }
+      
+      nav ul {
+        gap: 0.5rem;
+      }
+      
+      nav ul li a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem; /* Adjusted for mobile */
+      }
+      
+      .content-section {
+        flex-direction: column;
+      }
+      
+      .content-image, 
+      .content-text {
+        flex: 1 1 100%;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .page-title {
+        font-size: 1.8rem; /* Adjusted for mobile */
+      }
+      
+      .contact-section h2,
+      .table-section h1 {
+        font-size: 1.8rem; /* Adjusted for mobile */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      :root {
+        --base-font-size: 1rem; /* Smallest base size for very small screens */
+      }
+      
+      header {
+        padding: 15px;
+        margin: 5px;
+      }
+      
+      .header-top {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .header-title {
+        font-size: 1.8rem; /* Adjusted for very small screens */
+        padding: 10px 15px;
+      }
+      
+      .header-img {
+        height: 60px;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav ul li {
+        width: 100%;
+        text-align: center;
+      }
+      
+      nav ul li a {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+      }
+      
+      footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      
+      .social-icons {
+        justify-content: center;
+      }
+      
+      .image-content h3 {
+        font-size: 1.3rem; /* Adjusted for very small screens */
+      }
+      
+      .feature-card h3,
+      .contact-item h3 {
+        font-size: 1.3rem; /* Adjusted for very small screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header content remains exactly the same as before -->
+  <header>
+    <div class="header-top">
+      <img src="images/aboutlogo.jpg" alt="About Logo" class="header-img">
+      <h1 class="header-title">TechPlatform.in</h1>
+      <img src="images/loptop pic.jpg" alt="Laptop Logo" class="header-img">
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="products .html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content container with increased font sizes -->
+  <div class="main-container">
+    <h2 class="page-title">This is Home Page</h2>
+    
+    <section class="content-section">
+      <div class="content-image">
+        <img src="images/home logo.webp" alt="Home Logo">
+        <div class="image-content">
+          <h3>Why Choose Our Platform?</h3>
+          <p>TechPlatform.in provides cutting-edge technology solutions tailored to your business needs.</p>
+          <ul>
+            <li>24/7 Customer Support</li>
+            <li>Enterprise-grade Security</li>
+            <li>Scalable Infrastructure</li>
+            <li>99.9% Uptime Guarantee</li>
+          </ul>
+          <p>Our team of experts is dedicated to delivering exceptional service and innovative solutions.</p>
+          <p>With over 10 years of industry experience, we've helped 500+ businesses transform their digital infrastructure. Our award-winning platform combines innovation with reliability to deliver measurable results.</p>
+          <li><strong>10+ Years Experience</strong> - Trusted by 500+ businesses worldwide</li>
+<li><strong>Award-Winning Platform</strong> - Recognized for innovation and reliability</li>
+        </div>
+      </div>
+      
+      <div class="content-text">
+        <p>
+          A <strong>homepage</strong> is often considered the digital front door to a website It serves as 
+           the central point from which all other pages and sections are accessed.
+          A well-designed homepage helps users quickly understand what the website offers, how to navigate,
+           and where to find what they're looking for.
+           <br><br>
+          <strong>Primary Functions of a Homepage:</strong><br>
+          - Introduce your brand, business, or purpose.<br>
+          - Guide users through the rest of your website using a clear menu or navigation system.<br>
+          - Highlight important news, products, or announcements.<br>
+          - Offer quick links to featured services or recent updates.<br><br>
+        </p>
+        
+        <p>
+          In today's digital landscape, a homepage is crucial in shaping user experience. A slow, confusing, or cluttered homepage can drive users away in seconds.
+          Conversely, a fast, organized, and engaging homepage can convert casual visitors into loyal users or customers.<br><br>
+
+          <strong>Website vs. Browser Homepage:</strong><br>
+          - <em>Website Homepage:</em> The landing page users see when visiting a domain (e.g., techplatform.in). It typically features a navigation bar, banners, service highlights, and more.<br>
+          - <em>Browser Homepage:</em> The page that appears when you launch your browser (e.g., Google.com, Bing, or a custom start page).<br><br>
+          
+          <strong>What Makes a Homepage Effective?</strong>
+          - Visually appealing layout<br>
+          - Responsive design for mobile and tablets<br>
+          - Fast load times<br>
+          - Search functionality<br>
+          - Social media and contact integration<br><br>
+        </p>
+        
+        <p>
+          <strong>Tips to Improve Your Homepage:</strong><br>
+          ✔ Use real, high-quality images that reflect your brand<br>
+          ✔ Keep content simple and direct—avoid long blocks of text<br>
+          ✔ Make CTAs (Call To Action) visible—such as "Contact Us", "Learn More", or "Get Started"<br>
+          ✔ Include testimonials or brief success stats if relevant<br>
+        </p>
+      </div>
+    </section>
+    
+    <!-- Features Section with larger text -->
+    <section class="features-section">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Secure Platform</h3>
+        <p>Enterprise-grade security with end-to-end encryption and regular security audits.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>High Performance</h3>
+        <p>Optimized infrastructure that delivers blazing fast response times.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Dedicated support team available round the clock to assist you.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Scalable Solutions</h3>
+        <p>Grow your business without worrying about infrastructure limitations.</p>
+      </div>
+    </section>
+    
+    <!-- Contact Section with larger text -->
+    <section class="contact-section">
+      <h2><i class="fas fa-building"></i> Our Office Details</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt contact-icon"></i>
+          <h3>Address</h3>
+          <p>123 Tech Park, Sector 22<br>
+          Hyderabad, Telangana 500016</p>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-phone contact-icon"></i>
+          <h3>Phone</h3>
+          <p><a href="tel:+919876543210">+91 9876543210</a><br>
+          <a href="tel:+918765432109">+91 8765432109</a></p>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-envelope contact-icon"></i>
+          <h3>Email</h3>
+          <p><a href="mailto:info@techplatform.in">info@techplatform.in</a><br>
+          <a href="mailto:support@techplatform.in">support@techplatform.in</a></p>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-clock contact-icon"></i>
+          <h3>Working Hours</h3>
+          <p>Monday-Friday: 9AM - 6PM<br>
+          Saturday: 10AM - 2PM</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Table Section with larger text -->
+    <div class="table-section">
+      <h1>Details Table</h1>
+      <table>
+        <tr>
+          <th>Job Roles</th>
+          <th>Experience</th>
+          <th>Package</th>
+          <th>Location</th>
+        </tr>
+        <tr>
+          <td>Testing</td>
+          <td>5 years</td>
+          <td>10 LPA</td>
+          <td>Hyderabad</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer with larger text -->
+  <footer>
+    <span class="footer-text">TechPlatform.in</span>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <img src="images/aboutlogo.jpg" alt="Company Logo" class="footer-logo">
+  </footer>
+</body>
+</html>
