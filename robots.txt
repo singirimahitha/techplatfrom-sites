@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /  
-Sitemap: https://singirimahitha.github.io/techplatform-sites/sitemap.xml  
+Sitemap: https://singirimahitha.github.io/techplatfrom-sites/sitemap.xml  
